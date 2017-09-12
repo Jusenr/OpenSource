@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'//ADD THIS
 
 android {
     compileSdkVersion 26
@@ -29,4 +30,37 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support:cardview-v7:26.+'
+}
+
+// build a jar with source files
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+task javadoc(type: Javadoc) {
+    failOnError false
+    source = android.sourceSets.main.java.sourceFiles
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+    classpath += configurations.compile
+}
+// build a jar with javadoc
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives sourcesJar
+    archives javadocJar
+}
+
+//ADD
+publish {
+    userOrg = 'jusenr'//bintray用户名
+    groupId = 'com.jusenr.library'//jcenter上的路径
+    artifactId = 'opensoure'//项目名称
+    publishVersion = '1.0.0'//版本号
+    desc = 'Oh hi, this is a nice description for a project, right?'//描述，不重要
+    website = 'https://github.com/Jusenr/OpenSource'//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
+    licences = ['Apache-2.0']
 }

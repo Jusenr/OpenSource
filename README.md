@@ -14,5 +14,6 @@
 
 2017-08-24 14：40
 
+--gradlew clean build bintrayUpload
 
 ------

@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         tv.setText(stringFromJNI());
 
         TextView tv1 = (TextView) findViewById(R.id.sample_text1);
+        tv1.setText(stringFromJNI2());
     }
 
     /**
@@ -38,4 +39,6 @@ public class MainActivity extends AppCompatActivity {
      * which is packaged with this application.
      */
     public native String stringFromJNI();
+
+    public native String stringFromJNI2();
 }
