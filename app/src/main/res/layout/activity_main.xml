@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,32 +7,85 @@
     android:layout_height="match_parent"
     tools:context="com.jusenr.opensource.MainActivity">
 
-    <RelativeLayout
+    <TextView
+        android:id="@+id/sample_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:text="Hello World!"/>
+
+    <Button
+        android:id="@+id/btn_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Hello World!"/>
+
+    <TextView
+        android:id="@+id/sample_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_text"
+        android:layout_margin="10dp"
+        android:text="Hello World!"/>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sample_text1"
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/sample_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="Hello World!"/>
-
-        <Button
-            android:id="@+id/btn_text"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/et_username"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Hello World!"/>
+            android:hint="username"
+            android:padding="10dp"
+            android:textColor="@android:color/holo_red_light"/>
 
-        <TextView
-            android:id="@+id/sample_text1"
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="password"
+            android:padding="10dp"
+            android:textColor="@android:color/holo_red_light"/>
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/btn_text"
-            android:layout_margin="10dp"
-            android:text="Hello World!"/>
+            android:layout_below="@+id/sample_text1"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
 
-    </RelativeLayout>
+            <Button
+                android:id="@+id/btn_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="register"/>
 
-</android.support.constraint.ConstraintLayout>
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="login"/>
+
+            <TextView
+                android:id="@+id/tv_loginout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:text="LOGINOUT"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -27,6 +27,14 @@ android {
             path "CMakeLists.txt"
         }
     }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    //use legacy for android 6.0
+    useLibrary 'org.apache.http.legacy'
 }
 
 dependencies {
@@ -34,9 +42,15 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-//    compile project(':opensourcelibrary')
+    compile project(':opensourcelibrary')
     testCompile 'junit:junit:4.12'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.android.support:appcompat-v7:26.+'
-    compile 'com.github.Jusenr:OpenSource:1.0.0'
+
+    //Optional compile for GCM (Google Cloud Messaging).
+    compile 'com.google.android.gms:play-services-gcm:9.4.0'
+    compile 'com.hyphenate:hyphenate-sdk:3.3.0'
+
+    //不包含音视频通话的sdk
+//    compile 'com.hyphenate:hyphenate-sdk-lite:3.3.0'
 }
