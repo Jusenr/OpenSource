@@ -28,6 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:background="@android:color/transparent"
             android:hint="username"
             android:padding="10dp"
             android:textColor="@android:color/holo_red_light"/>
@@ -37,6 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:background="@android:color/transparent"
             android:hint="password"
             android:padding="10dp"
             android:textColor="@android:color/holo_red_light"/>

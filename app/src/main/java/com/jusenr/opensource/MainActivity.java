@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     public void run() {
                         Toast.makeText(getApplicationContext(), "登出成功!", Toast.LENGTH_SHORT).show();
+                        finish();
                     }
                 });
             }
