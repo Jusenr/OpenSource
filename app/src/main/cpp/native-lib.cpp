@@ -13,7 +13,7 @@ extern "C" {
 #define  LOGE(...)  __android_log_print(ANDROID_LOG_ERROR,LOG_TAG,__VA_ARGS__)
 
 JNIEXPORT jstring JNICALL
-Java_com_jusenr_opensource_MainActivity_stringFromJNI(
+Java_com_jusenr_opensource_LoginActivity_stringFromJNI(
         JNIEnv *env,
         jobject /* this */) {
     std::string hello = "Hello from C++";
@@ -21,7 +21,7 @@ Java_com_jusenr_opensource_MainActivity_stringFromJNI(
 }
 
 JNIEXPORT jstring JNICALL
-Java_com_jusenr_opensource_MainActivity_stringFromJNI2(
+Java_com_jusenr_opensource_LoginActivity_stringFromJNI2(
         JNIEnv *env,
         jobject /* this */) {
     std::string hello = "Hello from C++11";
