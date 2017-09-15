@@ -23,6 +23,14 @@
         android:layout_margin="10dp"
         android:text="back"/>
 
+    <Button
+        android:id="@+id/btn_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_toRightOf="@+id/btn_back"
+        android:text="chat"/>
+
     <TextView
         android:id="@+id/sample_text1"
         android:layout_width="wrap_content"

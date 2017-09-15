@@ -1,5 +1,6 @@
 package com.jusenr.opensource;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -37,6 +38,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //登出
                 loginout();
+            }
+        });
+        findViewById(R.id.btn_chat).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), ChatActivity.class).putExtra("userId", "zxr123"));
             }
         });
     }

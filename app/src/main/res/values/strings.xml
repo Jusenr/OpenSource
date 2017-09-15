@@ -10,4 +10,6 @@
     <string name="Registration_failed">注册失败</string>
     <string name="illegal_user_name">用户名不合法</string>
 
+    <string name="msg_recall_by_self">您撤回了一条消息</string>
+
 </resources>

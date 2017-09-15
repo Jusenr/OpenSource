@@ -31,6 +31,7 @@
             android:background="@android:color/transparent"
             android:hint="username"
             android:padding="10dp"
+            android:text="zxr123"
             android:textColor="@android:color/holo_red_light"/>
 
         <EditText
@@ -41,6 +42,7 @@
             android:background="@android:color/transparent"
             android:hint="password"
             android:padding="10dp"
+            android:text="123456"
             android:textColor="@android:color/holo_red_light"/>
 
         <LinearLayout

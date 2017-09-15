@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/OpenSource.iml" filepath="$PROJECT_DIR$/OpenSource.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../easeui/easeui/easeui.iml" filepath="$PROJECT_DIR$/../easeui/easeui/easeui.iml" />
       <module fileurl="file://$PROJECT_DIR$/opensourcelibrary/opensourcelibrary.iml" filepath="$PROJECT_DIR$/opensourcelibrary/opensourcelibrary.iml" />
     </modules>
   </component>
